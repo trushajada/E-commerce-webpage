@@ -16,8 +16,8 @@ const Darkmode = () => {
     console.log(element);
     
     useEffect(() => {
-        document.documentElement.classList.toggle('dark', isDarkMode); // Existing behavior
-        document.body.classList.toggle('dark-theme', isDarkMode); // New behavior
+        document.documentElement.classList.toggle('dark', isDarkMode);
+        document.body.classList.toggle('dark-theme', isDarkMode); 
         localStorage.setItem('darkMode', isDarkMode);
       }, [isDarkMode]);
 
