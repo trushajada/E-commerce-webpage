@@ -50,9 +50,7 @@ const Orderproduct = () => {
             }, 3000);
         }
     };
-    const deleteOrder = (id) => {
-        setOrders((prevOrders) => prevOrders.filter((order) => order.id !== id));
-      };
+
     const Ware = [
         {
             id: 1,
