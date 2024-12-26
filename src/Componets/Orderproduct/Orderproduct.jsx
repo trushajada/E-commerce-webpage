@@ -3,6 +3,7 @@ import product1 from '../../assets/images/product1.png';
 import product2 from '../../assets/images/product2.png';
 import product3 from '../../assets/images/product3.png';
 import { FiClock } from "react-icons/fi";
+
 const Orderproduct = () => {
     const [isPopupOpen, setPopupOpen] = useState(false);
     const [isNotificationVisible, setNotificationVisible] = useState(false);
@@ -50,7 +51,9 @@ const Orderproduct = () => {
             }, 3000);
         }
     };
-
+    const deleteOrder = (id) => {
+        setOrders((prevOrders) => prevOrders.filter((order) => order.id !== id));
+      };
     const Ware = [
         {
             id: 1,
@@ -154,9 +157,12 @@ const Orderproduct = () => {
                             <>
                                 <p className="mt-2 text-gray-700">Product Name: {selectedProduct.title}</p>
                                 <p className="mt-2 text-gray-700">Price: $30</p>
-                                <p className="mt-2 text-gray-700">Description: {selectedProduct.description}</p>
                             </>
                         )}
+                        <input type="text " placeholder="Name"  className="border w-full p-2 rounded-lg mb-3 mt-3 text-black"/>
+                        <input type="email " placeholder="Email" className="border w-full p-2 rounded-lg mb-3 text-black"/>
+                        <input type="text " placeholder="Address" className="border w-full p-2 rounded-lg mb-3 text-black"/>
+
                         <button onClick={submitOrder} className="bg-primary bg-gray-300 text-gray-800 py-2 px-4 rounded mt-4 w-full">
                             Submit Order
                         </button>

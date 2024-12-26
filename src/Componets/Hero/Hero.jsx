@@ -35,15 +35,7 @@ const Hero = () => {
         slidesToShow: 1,
         slidesToScroll: 1, 
         autoplay: true,
-        autoplaySpeed: 1000, 
-        responsive: [ 
-            {
-                breakpoint: 768,
-                settings: {
-                    arrows: false
-                }
-            }
-        ]
+        autoplaySpeed: 2000,
     };
 
     return (

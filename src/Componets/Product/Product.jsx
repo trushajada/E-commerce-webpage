@@ -68,7 +68,7 @@ const Product = () => {
     const displayedProducts = showAll ? products : products.slice(0, 5);
 
     return (
-        <section className=" bg-gray-100 dark:bg-gray-900 py-5 px-3">
+        <section className=" bg-gray-100 dark:bg-gray-900 py-5 px-3 w-full">
         <div className="container mx-auto p-5 ">
            
             <div className="text-center mb-10 max-w-[600px] mx-auto ">
@@ -94,7 +94,7 @@ const Product = () => {
             </div>
 
            
-            <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center gap-5">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center gap-5">
                 {displayedProducts.map((product) => (
                     <div
                         key={product.id}
