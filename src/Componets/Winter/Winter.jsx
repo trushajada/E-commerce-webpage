@@ -11,10 +11,10 @@ const Winter = () => {
             <section className="min-h-[550px] flex justify-center items-center py-12 sm:py-0 bg-gray-100 dark:bg-gray-900 ">
                 <div className="container mx-auto">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
-                        <div className="img mx-auto">
+                        <div className="img mx-auto px-5">
                             <img src={winter} alt="winter" className="w-[450px] h-[350px]" />
                         </div>
-                        <div className="detail">
+                        <div className="detail px-4">
                             <h1 className="text-4xl font-semibold mb-3">Winter Sale upto 50% Off</h1>
                             <p className="text-gray-400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio</p>
                             <div class="flex flex-col gap-4 mt-4">

@@ -30,7 +30,7 @@ const Navbar = () => {
 
             {/* header  */}
 
-            <div className="header shadow-lg px-2 p-3">
+            <div className="header shadow-lg px-2 p-3 hidden sm:block">
                 <div className="container mx-auto">
                     <nav className="cursor-pointer lg:w-full w-[500px] text-lg px-2" >
                         <ul className="items-center justify-center flex">

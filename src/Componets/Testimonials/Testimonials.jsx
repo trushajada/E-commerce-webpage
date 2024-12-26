@@ -39,11 +39,19 @@ const Testimonials = () => {
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
+    responsive: [
+        {
+          breakpoint: 768, 
+          settings: {
+            slidesToShow: 1, 
+          },
+        },
+      ],
 
   };
 
   return (
-    <section className="bg-gray-100 dark:bg-gray-900 py-5 px-3">
+    <section className="bg-gray-100 dark:bg-gray-900 py-12 px-3  ">
 
     <div className="container mx-auto p-5 ">
       {/* Section Header */}
@@ -59,7 +67,7 @@ const Testimonials = () => {
       <Slider {...sliderSettings}>
         {testimonials.map((testimonial) => (
           <div key={testimonial.id} className="px-4">
-            <div className="flex flex-col items-center gap-4 shadow-lg py-8 px-6 rounded-xl dark:bg-gray-800 relative">
+            <div className="flex flex-col items-center gap-4 shadow-lg py-8 px-6 rounded-xl dark:bg-gray-800 relative  grid-cols-1 sm:grid-cols-1">
               <img
                 src={testimonial.image}
                 alt={testimonial.name}

@@ -110,7 +110,7 @@ const Orderproduct = () => {
             {/* history sectiom  */}
             <button
                 onClick={() => setHistoryOpen(!isHistoryOpen)}
-                className="fixed top-4 right-4 bg-gray-700 text-white p-3 rounded-full shadow-lg z-30"
+                className="fixed top-20 right-4 bg-gray-700 text-white p-3 rounded-full shadow-lg z-30"
             >
                 <FiClock size={24} />
             </button>
