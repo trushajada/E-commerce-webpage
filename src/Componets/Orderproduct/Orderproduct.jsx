@@ -73,7 +73,7 @@ const Orderproduct = () => {
     ];
 
     return (
-        <section className="relative bg-gray-100 dark:bg-gray-900 min-h-screen flex py-5 px-3">
+        <section className="relative bg-gray-100 dark:bg-gray-900 flex py-5 px-3">
             <div className="container mx-auto p-3 py-5 hero flex-grow items-center justify-center">
                 <div className="py-5">
                     <span className="text-[#ed8900]">Top Rated Products for you</span>
