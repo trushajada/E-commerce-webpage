@@ -35,7 +35,7 @@ const Hero = () => {
         slidesToShow: 1,
         slidesToScroll: 1, 
         autoplay: true,
-        autoplaySpeed: 2000, 
+        autoplaySpeed: 1000, 
         responsive: [ 
             {
                 breakpoint: 768,
@@ -47,15 +47,15 @@ const Hero = () => {
     };
 
     return (
-        <section className="hero relative h-[650px] md:h-[80vh] overflow-hidden shadow-md">
+        <section className="hero relative h-[650px]  overflow-hidden shadow-md">
             <div className="container mx-auto relative z-10 h-full">
                 <Slider {...settings} className="h-full"> 
                     {Imagelist.map((item) => (
                         <div key={item.id} className="h-full flex flex-col items-center justify-center text-center px-4">
                             <div className="grid grid-cols-1 sm:grid-cols-2 justify-center items-center h-[650px] text-left">
                             <div className=" p-4 rounded-lg"> 
-                                <h1 className="text-6xl font-bold text-black drop-shadow-lg mb-2">{item.title}</h1>
-                                <p className="text-black drop-shadow-lg">{item.description}</p>
+                                <h1 className="text-6xl font-bold  drop-shadow-lg mb-2">{item.title}</h1>
+                                <p className=" drop-shadow-lg">{item.description}</p>
                                 <button className="bg-[#ed8900] mt-5 p-2 w-[130px] text-white rounded-full">Book Now</button>
                             </div>
                             <img src={item.img} alt={item.title} className="max-w-md mx-auto mb-8" />
@@ -65,7 +65,7 @@ const Hero = () => {
                     ))}
                 </Slider>
             </div>
-            <div className="h-[700px] w-[700px] bg-[#FEA92866] absolute right-0 rounded-3xl rotate-45 -top-1/2 md:-top-[200px] lg:-top-[150px]  "></div>
+            <div className="h-[700px] w-[700px] bg-[#FEA92866] absolute right-0 rounded-3xl rotate-45 -top-1/2 md:-top-[200px] lg:-top-[370px]  "></div>
         </section>
     );
 };

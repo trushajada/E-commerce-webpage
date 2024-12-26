@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import lightIcon from '../../assets/images/light.png'; 
 import darkIcon from '../../assets/images/dark.png';
+import Orderproduct from "../orderproduct/orderproduct";
 
 const Darkmode = () => {
     const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -22,6 +23,7 @@ const Darkmode = () => {
       }, [isDarkMode]);
 
     return (
+        <div>
         <button
             onClick={toggleTheme}
             className="relative w-12 h-12"
@@ -34,6 +36,7 @@ const Darkmode = () => {
                 style={{ position: 'absolute', top: 0, left: 0 }}
             />
         </button>
+        </div>
     );
 };
 
