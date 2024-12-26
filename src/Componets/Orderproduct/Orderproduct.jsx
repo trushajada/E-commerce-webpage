@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import product1 from '../../assets/images/product1.png';
 import product2 from '../../assets/images/product2.png';
 import product3 from '../../assets/images/product3.png';
@@ -6,6 +6,13 @@ import { MdOutlineStar } from "react-icons/md";
 
 
 const Orderproduct = () => {
+    const [isPopupopen , setPopupopen]=useState(false);
+
+
+    const openpopup=()=>{
+        setPopupopen(true)
+    }
+
     const Ware = [
         {
             id: 1,
@@ -27,6 +34,26 @@ const Orderproduct = () => {
         }
     ];
 
+    const proDetail=[
+        {
+            id:1,
+            name:"Casual Wear",
+            discription:"lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            price:"$30"
+        },
+        {
+            id:1,
+            name:"Casual Wear",
+            discription:"lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            price:"$30"
+        },
+        {
+            id:1,
+            name:"Casual Wear",
+            discription:"lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            price:"$30"
+        }
+    ]
     return (
         <section className="relative bg-gray-100 dark:bg-gray-900 min-h-screen flex py-5 px-3">
             <div className="container mx-auto p-3 py-5 hero flex-grow items-center justify-center">
@@ -50,15 +77,42 @@ const Orderproduct = () => {
                             <div className="p-2 text-center">
                             <div class="w-full flex items-center justify-center gap-1"></div>
                             <h3 className="text-xl font-bold mb-2 text-center">{item.title}</h3>
-                            <p className="text-center text-gray-700 dark:text-gray-300 text-xs">{item.description}</p>
-                            <button className="bg-[#ed8900] mt-4 py-2 px-4 w-full text-white rounded-full hover:bg-white hover:text-[#ed8900] transition duration-300">Order Now</button>
+                            <p className="text-center  text-xs">{item.description}</p>
+                            <button className="bg-[#ed8900] mt-4 py-2 px-4 w-full text-white rounded-full hover:bg-white hover:text-[#ed8900] transition duration-300" onClick={openpopup}>Order Now</button>
                             </div>
                             
                     </div>
                 ))}
             </div>
             </div>
+
+            {/* popup section  */}
+
+            {isPopupopen&&(
+                
+                <div className="fixed inset-0 bg-black/50 flex item-center justify-center z-10">
+                    <div className="bg-white rounded-lg p-6 shadow-lg w-[200px] h-[200px] mx-auto">
+                         {/* {proDetail.map((items) => (
+                            <div key={items.id}> 
+                            <h3 className="text-xl font-bold mb-2 text-center">{items.name}</h3>
+                            <p className="text-center  text-xs">{items.discription}</p>
+                            <p className="text-center  text-xs">{items.price}</p>
+                            <button className="bg-[#ed8900] mt-4 py-2 px-4 w-full text-white rounded-full hover:bg-white hover:text-[#ed8900] transition duration-300" onClick={openpopup}>Order Now</button>
+                            </div>
+                    ))} */}
+                    <div className="text-black">
+                    <h3 className="text-xl font-bold mb-2 text-center">rt5fgsd</h3>
+                            <p className="text-center  text-xs">dsh</p>
+                            <p className="text-center  text-xs">55</p>
+                    </div>
+                    
+                    </div>
+
+                </div>
+        )};
         </section>
+
+       
     );
 };
 
